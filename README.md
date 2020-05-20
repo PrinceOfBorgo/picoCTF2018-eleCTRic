@@ -13,9 +13,9 @@ Port may be different.
 TODO (see script comments)
 
 ## Usage
-Simply run `eleCTRic_attack.py` as a python script and insert port to which to connect:
+Simply run `bruteforce.py` or `fast.py` as a python script and insert port to which to connect:
 ```
-$ python SpyFi_attack.py
+$ python bruteforce.py
 picoCTF port: 61333
 [+] Opening connection to 2018shell.picoctf.com on port 61333: Done
 
@@ -29,4 +29,16 @@ Test share code: R/mckz597UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=
 Test share code: R/mckz997UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=                                                                                                                      
 
 Flag: picoCTF{alw4ys_4lways_Always_check_int3grity_6c094576}
+```
+
+```
+$ python fast.py 
+picoCTF port: 61333
+[+] Opening connection to 2018shell.picoctf.com on port 61333: Done
+
+Flag file name: flag_dbe2caedf81debbf4faa.txt                                                                                                                                  
+                                                                                                                                                                               
+Share code: jVdFAOGF7Fz2gcWvecZHl49eRgXY1ehYpczQsmk=                                                                                                                           
+
+Flag: picoCTF{alw4ys_4lways_Always_check_int3grity_6c094576}          
 ```
