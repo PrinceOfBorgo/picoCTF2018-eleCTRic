@@ -6,7 +6,6 @@ import colorama
 colorama.init()
 
 port = int(input("picoCTF port: "))
-print()
 
 r = remote("2018shell.picoctf.com", port)
 r.sendlineafter("Please choose: ", "i")
