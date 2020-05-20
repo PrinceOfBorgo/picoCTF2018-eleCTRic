@@ -16,7 +16,6 @@ Simply run `eleCTRic_attack.py` as a python script and insert port to which to c
 ```
 $ python SpyFi_attack.py
 picoCTF port: 61333
-
 [+] Opening connection to 2018shell.picoctf.com on port 61333: Done
 
 Flag file name: flag_a0c60ed1a62753905e62.txt                                                                                                                                  
