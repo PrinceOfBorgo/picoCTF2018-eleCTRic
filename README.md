@@ -33,10 +33,11 @@ I proposed two solutions.
 The first one is quite slow since it performs several decryptions passing share codes obtained by brute-forcing the fifth byte of a sample share code obtained encrypting an empty file with name equal to the flag file but replacing `_` with an allowed character. Decryptions will always fail until we get to the flag file or to our encrypted file (recognizable by the fact that it is empty). We get to the flag in at most 256 attempts.
 
 The second solution is way faster since we can find the share code directly from the ASCII code of `_`.
-Let's call `cipher[i]` and `plain[i]` the `i`th block of ciphertext and plaintext respectively and `enc_ctr[i]` the encrypted counter at `i`th step, we have that `cipher[i] = enc_ctr[i] xor plain[i]` and hence `enc_ctr[i] = cipher[i] xor plain[i]`. Since XOR is a bitwise operation, we find the value of `enc_ctr[i]` byte corresponding to the position of `_` (fifth byte) and then we use it to put the encrypted underscore into the initial share code.
-
-Let's see an example: 
-`flag_dbe2caedf81debbf4faa` is the flag name, `flagXdbe2caedf81debbf4faa` is the new name obtained replacing `_` with `X` (ASCII code: `0x58`). The difference is in the fifth byte. Suppose that the fifth byte of the share code is `0x26`. If `enc_ctr` is the byte of the encrypted counter that modifies the fifth byte, then `0x26 = enc_ctr xor 'X' = enc_ctr xor 0x58` from which `enc_ctr = 0x26 xor 0x58 = 0x7e`. Now, since ASCII code for `_` is `0x5f`, we find the encrypted byte `cipher = enc_ctr xor 0x5f = 0x7e xor 0x5f = 0x21`. Now we can simply replace the fifth byte of the share code with `0x21` and, after converting to Base64, it will decrypt the flag file.
+Let's call `cipher[i]` and `plain[i]` the `i`th block of ciphertext and plaintext respectively and `enc_ctr[i]` the encrypted counter at `i`th step, we have that `cipher[i] = enc_ctr[i] xor plain[i]` and hence `enc_ctr[i] = cipher[i] xor plain[i]`. Since XOR is a bitwise operation, we find the value of `enc_ctr[i]` byte corresponding to the position of `_` (fifth byte) and then we use it to put the encrypted underscore into the initial share code. Let's see an example:  
+`flag_dbe2caedf81debbf4faa` is the flag name, `flagXdbe2caedf81debbf4faa` is the new name obtained replacing `_` with `X` (ASCII code: `0x58`). The difference is in the fifth byte. Suppose that the fifth byte of the share code is `0x26`.  
+If `enc_ctr` is the byte of the encrypted counter that modifies the fifth byte, then `0x26 = enc_ctr xor 'X' = enc_ctr xor 0x58` from which `enc_ctr = 0x26 xor 0x58 = 0x7e`.  
+Now, since ASCII code for `_` is `0x5f`, we find the encrypted byte `cipher = enc_ctr xor 0x5f = 0x7e xor 0x5f = 0x21`.  
+Now we can simply replace the fifth byte of the share code with `0x21` and, after converting to Base64, it will decrypt the flag file.
 
 ## Usage
 Simply run `bruteforce.py` or `fast.py` as a python script and insert port to which to connect:
