@@ -59,13 +59,13 @@ Flag: picoCTF{alw4ys_4lways_Always_check_int3grity_6c094576}
 ```
 
 ```
-$ python fast.py 
+$ python fast.py
 picoCTF port: 61333
 [+] Opening connection to 2018shell.picoctf.com on port 61333: Done
 
-Flag file name: flag_dbe2caedf81debbf4faa.txt                                                                                                                                  
-                                                                                                                                                                               
-Share code: jVdFAOGF7Fz2gcWvecZHl49eRgXY1ehYpczQsmk=                                                                                                                           
+Flag file name: flag_dbe2caedf81debbf4faa.txt
+
+Share code: jVdFAOGF7Fz2gcWvecZHl49eRgXY1ehYpczQsmk=
 
 Flag: picoCTF{alw4ys_4lways_Always_check_int3grity_6c094576}          
 ```
