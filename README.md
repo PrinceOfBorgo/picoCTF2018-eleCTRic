@@ -46,14 +46,14 @@ $ python bruteforce.py
 picoCTF port: 61333
 [+] Opening connection to 2018shell.picoctf.com on port 61333: Done
 
-Flag file name: flag_a0c60ed1a62753905e62.txt                                                                                                                                  
-                                                                                                                                                                               
-Test share code: R/mckwB97UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=                                                                                                                      
+Flag file name: flag_a0c60ed1a62753905e62.txt
+
+Test share code: R/mckwB97UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=
 Test share code: R/mckwF97UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=
 ...
 ...
-Test share code: R/mckz597UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=                                                                                                                      
-Test share code: R/mckz997UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=                                                                                                                      
+Test share code: R/mckz597UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=
+Test share code: R/mckz997UXQw4xEI/zJ9xagzs1QKbgQ1N2dWGY=
 
 Flag: picoCTF{alw4ys_4lways_Always_check_int3grity_6c094576}
 ```
