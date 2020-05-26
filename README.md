@@ -27,7 +27,7 @@ Since the ciphertext blocks are generated independently of the others and XORing
 
 Now we che think to a solution: we can encrypt files with names equal to the flag file but replacing `_` with an allowed character. This will give us a share code that, decoded from Base64, will differ from the desired share code only in the fifth byte (the one corresponding to `_`).
 
-##Solution
+## Solution
 I proposed two solutions.
 
 The first one is quite slow since it performs several decryptions passing share codes obtained by brute-forcing the fifth byte of a sample share code obtained encrypting an empty file with name equal to the flag file but replacing `_` with an allowed character. Decryptions will always fail until we get to the flag file or to our encrypted file (recognizable by the fact that it is empty). We get to the flag in at most 256 attempts.
