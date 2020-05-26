@@ -25,7 +25,7 @@ In CTR mode the plaintext is divided in blocks of fixed length. The encryption o
 We can notice that the cipher is initialized at the start of the program (in `main()`) so key and counter remain always the same for the entire session.
 Since the ciphertext blocks are generated independently of the others and XORing is a bitwise operation, encrypting similar plaintexts with the same key and the same initial counter will give us similar ciphertexts: if `p1` is a plaintext with ciphertext `c1` and `p2` is a plaintext equal to `p1` except for a single byte, then its ciphertext `c2` will differ from `c1` only in that byte.
 
-Now we che think to a solution: we can encrypt files with names equal to the flag file but replacing `_` with an allowed character. This will give us a share code that, decoded from Base64, will differ from the desired share code only in the fifth byte (the one corresponding to `_`).
+Now we can think to a solution: we can encrypt files with names equal to the flag file but replacing `_` with an allowed character. This will give us a share code that, decoded from Base64, will differ from the desired share code only in the fifth byte (the one corresponding to `_`).
 
 ## Solution
 I proposed two solutions.
