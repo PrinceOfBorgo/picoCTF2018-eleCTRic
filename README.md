@@ -23,7 +23,7 @@ The used encryption is AES with [CTR mode](https://en.wikipedia.org/wiki/Block_c
 In CTR mode the plaintext is divided in blocks of fixed length. The encryption of each block doesn't depend on other blocks but only on its position inside the plaintext: the `n`th plaintext block is XORed with the `n`th encrypted counter. The counter can be seen as a block of random bytes which is incremented by 1 each time a block is encrypted.
 
 We can notice that the cipher is initialized at the start of the program (in `main()`) so key and counter remain always the same for the entire session.
-Since the ciphertext blocks are generated independently of the others and XORing is a bitwise operation, encrypting similar plaintexts with the same key and the same initial counter will give use similar ciphertexts: if `p1` is a plaintext with ciphertext `c1` and `p2` is a plaintext equal to `p1` except for a single byte, then its ciphertext `c2` will differ from `c1` only in that byte.
+Since the ciphertext blocks are generated independently of the others and XORing is a bitwise operation, encrypting similar plaintexts with the same key and the same initial counter will give us similar ciphertexts: if `p1` is a plaintext with ciphertext `c1` and `p2` is a plaintext equal to `p1` except for a single byte, then its ciphertext `c2` will differ from `c1` only in that byte.
 
 Now we che think to a solution: we can encrypt files with names equal to the flag file but replacing `_` with an allowed character. This will give us a share code that, decoded from Base64, will differ from the desired share code only in the fifth byte (the one corresponding to `_`).
 
