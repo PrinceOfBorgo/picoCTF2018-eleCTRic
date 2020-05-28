@@ -1,6 +1,6 @@
 # picoCTF2018 - eleCTRic
 ## Text
-> You came across a custom server that Dr Xernon's company eleCTRic Ltd uses. It seems to be storing some encrypted files. Can you get us the flag? Connect with nc 2018shell.picoctf.com 61333. [Source](https://github.com/PrinceOfBorgo/picoCTF2018-eleCTRic/blob/master/eleCTRic.py).
+> You came across a custom server that Dr Xernon's company eleCTRic Ltd uses. It seems to be storing some encrypted files. Can you get us the flag? Connect with `nc 2018shell.picoctf.com 61333`. [Source](https://github.com/PrinceOfBorgo/picoCTF2018-eleCTRic/blob/master/eleCTRic.py).
 
 Port may be different.
 
