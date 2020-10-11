@@ -44,7 +44,6 @@ print(f"{Style.RESET_ALL}Share code:{Fore.BLUE}{Style.BRIGHT}", base64_share_cod
 # Decrypt using the share code in base64.
 r.sendlineafter("Please choose: ", "e")
 r.sendlineafter("Share code? ", base64_share_code)
-while b"Data: " in r.recvline():
+if b"Data: " in r.recvline():
 	flag = decode(r.recvline(), "ascii").strip()
 	print(f"{Style.RESET_ALL}\nFlag:{Fore.GREEN}{Style.BRIGHT}", flag)
-	break
