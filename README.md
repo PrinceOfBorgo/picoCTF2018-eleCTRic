@@ -10,7 +10,7 @@ Port may be different.
 > Do I need to say it in different words? You mustn't repeat thyself.
 
 ## Problem description
-Connecting to the server we can see a menu. Entering `i` we obtain a list of files, in particular, a single `.txt` file named `flag_` followed by some random hex digits. Entering `n` we are asked to insert a name file and some data to encrypt and we receive a share code used for decrypt that file. Entering `e` we are asked to pass a share code: if it correspond to a previously encrypted file, its decrypted content will be printed to screen. It is pretty obvious that we have to find the share code for `flag_[...].txt` file in order to decrypt it and get the flag.
+Connecting to the server we can see a menu. Entering `i` we obtain a list of files, in particular, a single `.txt` file named `flag_` followed by some random hex digits. Entering `n` we are asked to insert a name file and some data to encrypt and we receive a share code used for decrypt that file. Entering `e` we are asked to pass a share code: if it corresponds to a previously encrypted file, its decrypted content will be printed to screen. It is pretty obvious that we have to find the share code for `flag_[...].txt` file in order to decrypt it and get the flag.
 
 Analyzing the provided source code we can see that the share code generated during the encryption of a file is its encrypted name. In order to get our desired share code we could think to simply encrypt a new file with the same name of the one containing the flag. Unfortunately this cannot be done for two reasons:
 1. using a file name of an existing file will overwrite the original content (bye bye flag);
