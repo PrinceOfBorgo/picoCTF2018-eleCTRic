@@ -16,7 +16,7 @@ Analyzing the provided source code we can see that the share code generated duri
 1. using a file name of an existing file will overwrite the original content (bye bye flag);
 2. the flag name contains an underscore that is considered a disallowed character so the program will stop us before printing the share code.
 
-The used encryption is AES with [CTR mode](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)) with blocks of 32 bits, the ciphertext is converted to Base64 encoding.
+The encryption used is AES in [CTR mode](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)) with blocks of 32 bits, the ciphertext is converted to Base64 encoding.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/3f/Ctr_encryption.png)
 
